@@ -1,0 +1,26 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2>¡Bienvenido a tu timer!</h2>
+  <h3>Tu meta semanal</h3>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col>Meta</ion-col>
+      <ion-col>Porcentaje</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let meta of listaMetas; let indexArray = index;">
+      <ion-col>
+        <p>{{meta.nombre}}</p>
+      </ion-col>
+      <ion-col>
+        <p>{{meta.porcentaje}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
