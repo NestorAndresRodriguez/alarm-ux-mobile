@@ -20,7 +20,6 @@ export class Tab1Page implements OnInit{
     this.listaMetas.push(new Meta("Meta 3",'15%'))
     this.listaMetas.push(new Meta("Meta 4",'15%'))
     this.listaMetas.push(new Meta("Meta 5",'26%'))
-    console.log(this.listaMetas)
   }
 
 }

@@ -17,5 +17,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 2.2.3. Revise que la versión instalada de node es la v20.9.0
 3. Instalar el CLI de ionic
 3.1. Comando para instalar el ionic CLI: npm install -g @ionic/cli
+3.2. Ejecute el comando npm i para instalar las dependencias del proyecto
 4. Correr el proyecto
 4.1. Ejecutar el comando ionoc serve
