@@ -1,17 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="false">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Configuración
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+  <ion-text>
+    Cuenta
+  </ion-text>
+    <ion-button expand="block" color="primary" shape="round" (click)="cerrarSesion()">
+      Cerrar Sesión
+    </ion-button>
+    <ion-text>
+      Versión {{ version }}
+    </ion-text>
+  </div>
 </ion-content>
