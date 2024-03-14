@@ -7,16 +7,29 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <h2>Actualmente te falta: </h2>
-  <div class="count-down-timer">
-    <div class="wrapper">
-      <div class="times">
-        <p #hours> : </p>
-        <p #minutes> : </p>
-        <p #seconds> : </p>
+  <div *ngIf="stateTimer">
+    <h2>Actualmente te falta: </h2>
+    <div class="count-down-timer">
+      <div class="wrapper">
+        <div class="times">
+          <p #hours> : </p>
+          <p #minutes> : </p>
+          <p #seconds> : </p>
+        </div>
       </div>
     </div>
+    <h2>Para tu próxima pausa</h2>
+    <ion-button expand="block" color="primary" shape="round" (click)="detener()">Detener</ion-button>
   </div>
-  <h2>Para tu próxima pausa</h2>
-  <ion-button expand="block" color="primary" shape="round" (click)="detener()">Detener</ion-button>
+  
+  <div *ngIf="!stateTimer">
+    <h2>Configura tu próxima pausa</h2>
+    <ion-datetime presentation="time" hourCycle="h24"></ion-datetime>
+    <ion-button expand="block" color="primary" shape="round" (click)="iniciar()">Iniciar</ion-button>
+    <ion-row>
+        <ion-button col-6 expand="block" style="width: 48%;" color="primary" shape="round" (click)="recomendado()">Recomendado</ion-button>
+        <ion-button col-6 expand="block" style="width: 48%;"  color="primary" shape="round" (click)="ultima()">Última</ion-button>
+    </ion-row>
+  </div>
+
 </ion-content>
