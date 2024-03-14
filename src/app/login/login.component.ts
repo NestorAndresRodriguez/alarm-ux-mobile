@@ -22,8 +22,6 @@ export class LoginComponent  implements OnInit {
   }
 
   login(){
-    if(this.user.usuario === undefined || this.user.contrasena === undefined)
-      return
       this.router.navigateByUrl('/home')
   }
 
